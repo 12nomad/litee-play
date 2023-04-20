@@ -22,7 +22,7 @@ const SortDropdown = () => {
   };
 
   return (
-    <div className="mb-4">
+    <div className="hidden md:block">
       <Dropdown
         label={selected ? `Sort by: ${selected}` : "Sort by: Relevance"}
         dismissOnClick={true}

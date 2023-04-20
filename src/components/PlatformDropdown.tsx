@@ -15,10 +15,10 @@ const PlatformDropdown = () => {
     dispatch({ type: "SET_PLATFORM_FILTER", payload: { id, name } });
   };
 
-  if (platformsError) return <>Error!</>;
+  if (platformsError) return <>Error...</>;
 
   return (
-    <div className="mb-4">
+    <div>
       <Dropdown
         label={
           platformFilterName
@@ -28,6 +28,9 @@ const PlatformDropdown = () => {
         dismissOnClick={true}
         color="gray"
       >
+        <Dropdown.Item onClick={() => onSelectPlatformId(-1, "all")}>
+          All
+        </Dropdown.Item>
         {platformsLoading ? (
           <Spinner />
         ) : (

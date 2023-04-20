@@ -1,5 +1,6 @@
 import GameHeading from "./components/GameHeading";
 import GamesList from "./components/GamesList";
+import GenreDropdown from "./components/GenreDropdown";
 import NavBar from "./components/NavBar";
 import PlatformDropdown from "./components/PlatformDropdown";
 import Sidebar from "./components/Sidebar";
@@ -12,12 +13,13 @@ const App = () => {
         <NavBar />
       </header>
       <div className="grid md:grid-cols-5 text-white max-h-[calc(100vh_-_86px)] ">
-        <aside className="hidden lg:block bg-gray-900 py-4 pl-8">
+        <aside className="hidden lg:block   bg-gray-900 py-4 pl-8">
           <Sidebar />
         </aside>
-        <main className="col-span-4 bg-gray-900 p-4">
+        <main className="col-span-5 lg:col-span-4  bg-gray-900 p-4">
           <GameHeading />
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-4 mb-4">
+            <GenreDropdown />
             <PlatformDropdown />
             <SortDropdown />
           </div>

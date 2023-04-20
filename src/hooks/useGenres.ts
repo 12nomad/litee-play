@@ -43,7 +43,7 @@ const useGenres = () => {
     };
   }, []);
 
-  return rest;
+  return { ...rest, dispatch };
 };
 
 export default useGenres;

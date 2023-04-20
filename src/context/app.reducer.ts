@@ -30,20 +30,26 @@ const appReducer = (state = initialState, action: TAppAction): IAppContext => {
         ...state,
         genreFilterId: payload.id,
         genreFilterName: payload.name,
+        searchValue: undefined,
       };
 
     case "SET_PLATFORM_FILTER":
       return {
         ...state,
-        platformFilterId: payload.id,
-        platformFilterName: payload.name,
+        platformFilterId: payload.id === -1 ? undefined : payload.id,
+        platformFilterName: payload.name === "all" ? undefined : payload.name,
       };
 
     case "SET_PLATFORM_SORT_VALUE":
       return { ...state, platformSortValue: payload.value };
 
     case "SET_SEARCH_VALUE":
-      return { ...state, searchValue: payload.value };
+      return {
+        ...state,
+        searchValue: payload.value,
+        genreFilterId: undefined,
+        genreFilterName: undefined,
+      };
 
     case "SET_ERROR":
       return { ...state, error: payload.error };

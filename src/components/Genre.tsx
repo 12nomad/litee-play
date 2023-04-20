@@ -1,6 +1,7 @@
 import { useAppContext } from "../context/app.context";
 import { IGenre } from "../context/app.interface";
 import { FaAngleRight } from "react-icons/fa";
+import cropImage from "../utils/crop-image.util";
 
 const Genre = ({ name, image_background, id }: IGenre) => {
   const { dispatch, genreFilterId } = useAppContext();
@@ -11,9 +12,9 @@ const Genre = ({ name, image_background, id }: IGenre) => {
   return (
     <li className="flex items-center mb-4 cursor-pointer" onClick={onClick}>
       <img
-        src={image_background}
+        src={cropImage(image_background)}
         alt="genre image background"
-        className="w-8 h-8 rounded-lg"
+        className="w-8 h-8 rounded-lg object-cover"
       />
       <span
         className={`text-lg ml-4 mr-2 ${

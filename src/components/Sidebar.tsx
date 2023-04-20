@@ -6,7 +6,7 @@ import { BiCategory } from "react-icons/bi";
 const Sidebar = () => {
   const { genres, genresLoading, genresError } = useGenres();
 
-  if (genresError) return <>error</>;
+  if (genresError) return <>Error...</>;
 
   return (
     <>
