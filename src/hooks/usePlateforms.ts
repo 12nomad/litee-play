@@ -16,9 +16,9 @@ const usePlatforms = () => {
       .get<IGetPlatformsResponse>("/platforms/lists/parents")
       .then((res) => {
         dispatch({
-          type: "GET_GAMES_PLATFORM",
+          type: "GET_PLATFORMS",
           payload: {
-            games: res.data.results,
+            platforms: res.data.results,
           },
         });
       });

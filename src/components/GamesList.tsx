@@ -9,7 +9,7 @@ const GamesList = () => {
   const { games, loading, error } = useGames({
     params: {
       genres: genreFilterId,
-      platforms: platformFilterId,
+      parent_platforms: platformFilterId,
       ordering: platformSortValue,
       search: searchValue,
     },
