@@ -10,7 +10,7 @@ const client = axios.create({
   baseURL: "https://api.rawg.io/api",
   params: { key: import.meta.env.VITE_RAWG_API },
   headers: {
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": "https://litee-play.netlify.app",
   },
 });
 
