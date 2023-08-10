@@ -9,7 +9,6 @@ export interface IResponse<T> {
 const client = axios.create({
   baseURL: "https://api.rawg.io/api",
   params: { key: import.meta.env.VITE_RAWG_API },
-  withCredentials: true,
   headers: {
     "Access-Control-Allow-Origin": "*",
   },
