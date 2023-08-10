@@ -6,7 +6,7 @@ import SortDropdown from "../components/home/SortDropdown";
 
 const Home = () => {
   return (
-    <>
+    <div className="min-h-screen">
       <aside className="text-white  bg-gray-900 pb-4 px-4 lg:px-8 md:pb-5 xl:pb-6">
         <Sidebar />
       </aside>
@@ -19,7 +19,7 @@ const Home = () => {
         </div>
         <GamesList />
       </main>
-    </>
+    </div>
   );
 };
 
