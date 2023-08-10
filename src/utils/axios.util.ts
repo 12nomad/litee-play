@@ -11,8 +11,10 @@ const client = axios.create({
   params: { key: import.meta.env.VITE_RAWG_API },
   headers: {
     "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "*",
     "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+    "Access-Control-Allow-Headers":
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization",
   },
 });
 
