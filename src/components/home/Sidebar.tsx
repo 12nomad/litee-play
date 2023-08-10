@@ -4,6 +4,7 @@ import { BiCategory } from "react-icons/bi";
 import Genre from "./Genre";
 import useGenres from "../../hooks/useGenres";
 import GenreSkeleton from "../GenreSkeleton";
+import Spinner from "../Spinner";
 
 const Sidebar = () => {
   const { data, isLoading, error } = useGenres();
@@ -13,6 +14,13 @@ const Sidebar = () => {
 
   const slideRight = () =>
     (document.getElementById("slider")!.scrollLeft += 500);
+
+  if (isLoading)
+    return (
+      <div className="grid place-items-center text-white text-xl font-bold">
+        <Spinner />
+      </div>
+    );
 
   if (error) return <>{error?.message}</>;
 
