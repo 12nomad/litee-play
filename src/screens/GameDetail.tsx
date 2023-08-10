@@ -25,21 +25,23 @@ const GameDetail = () => {
     </div>;
 
   return (
-    <article className="text-white px-4 lg:px-8 max-h-[calc(100vh_-_133px)] md:max-h-[calc(100vh_-_144px)] overflow-y-auto scrollbar-hide">
-      <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-        <img
-          src={cropImage(data?.background_image || "")}
-          alt="genre image background"
-          className="w-8 h-8 rounded-lg object-cover"
-        />
-        <span>{data?.name}</span>
-      </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <GameInfo game={data} />
-        <GameTrailer gameId={data?.id} />
-      </div>
-      <GameScreenShots gameId={data?.id} />
-    </article>
+    <div className="min-h-screen">
+      <article className="text-white px-4 lg:px-8 max-h-[calc(100vh_-_133px)] md:max-h-[calc(100vh_-_144px)] overflow-y-auto scrollbar-hide">
+        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+          <img
+            src={cropImage(data?.background_image || "")}
+            alt="genre image background"
+            className="w-8 h-8 rounded-lg object-cover"
+          />
+          <span>{data?.name}</span>
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          <GameInfo game={data} />
+          <GameTrailer gameId={data?.id} />
+        </div>
+        <GameScreenShots gameId={data?.id} />
+      </article>
+    </div>
   );
 };
 
