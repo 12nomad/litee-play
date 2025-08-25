@@ -4,7 +4,7 @@ A simple clone of rawg.io to browse available game on each platform
 
 ## 🚀 Tech Stack
 
-- React.js, Vite
+- Typescript, React.js, Vite
 - React Query v4, Flowbite Tailwind CSS
 - RAWG API
 
