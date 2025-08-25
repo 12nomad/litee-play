@@ -1,6 +1,6 @@
 # Litee Play
 
-A simple clone of rawg.io to browse available game on each platform
+A simple clone of rawg.io to browse available games for each platform
 
 ## 🚀 Tech Stack
 
